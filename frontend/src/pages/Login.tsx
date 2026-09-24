@@ -34,13 +34,13 @@ export const Login: React.FC = () => {
       <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="w-full max-w-md z-10">
-        {/* Brand identity with official logo */}
+        {/* Brand identity with official circular logo */}
         <div className="text-center mb-8">
-          <div className="inline-flex p-3 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl mb-4">
+          <div className="inline-flex p-1.5 rounded-full bg-slate-900/90 border-2 border-blue-500/40 shadow-2xl shadow-blue-500/20 mb-4 hover:border-blue-400 transition">
             <img
               src="/logo.png"
               alt="STOCKSENSE Official Logo"
-              className="w-16 h-16 object-contain"
+              className="w-20 h-20 object-cover rounded-full shadow-inner"
             />
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-white font-mono">

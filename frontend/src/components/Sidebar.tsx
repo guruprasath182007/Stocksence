@@ -46,13 +46,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
 
   return (
     <aside className="w-64 bg-slate-900 border-r border-slate-800 flex flex-col h-screen fixed left-0 top-0 select-none z-30">
-      {/* Brand Header with Official Logo */}
+      {/* Brand Header with Official Circular Logo */}
       <div className="p-5 border-b border-slate-800/80 flex items-center space-x-3.5">
-        <img
-          src="/logo.png"
-          alt="STOCKSENSE Logo"
-          className="w-10 h-10 object-contain rounded-lg shadow-sm"
-        />
+        <div className="w-10 h-10 rounded-full border border-blue-500/40 p-0.5 bg-slate-950 shrink-0 shadow-sm flex items-center justify-center">
+          <img
+            src="/logo.png"
+            alt="STOCKSENSE Logo"
+            className="w-full h-full object-cover rounded-full"
+          />
+        </div>
         <div className="flex flex-col">
           <span className="text-xl font-bold tracking-tight text-white font-mono flex items-center gap-1.5">
             STOCKSENSE

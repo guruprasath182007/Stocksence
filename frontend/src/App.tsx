@@ -21,7 +21,9 @@ const AuthenticatedApp: React.FC = () => {
   if (isLoading) {
     return (
       <div className="h-screen w-screen bg-slate-950 flex flex-col items-center justify-center space-y-4">
-        <img src="/logo.png" alt="STOCKSENSE" className="w-12 h-12 object-contain animate-pulse" />
+        <div className="w-16 h-16 rounded-full border-2 border-blue-500/40 p-1 bg-slate-900 shadow-xl flex items-center justify-center animate-pulse">
+          <img src="/logo.png" alt="STOCKSENSE" className="w-full h-full object-cover rounded-full" />
+        </div>
         <div className="flex items-center space-x-2 text-slate-400 text-xs">
           <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping" />
           <span>Initializing STOCKSENSE Intelligence Engine...</span>

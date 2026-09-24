@@ -1,7 +1,7 @@
 # STOCKSENSE — AI-Powered Inventory Intelligence & Demand Forecasting Platform
 
 <p align="center">
-  <img src="LOGO.png" alt="STOCKSENSE Logo" width="120" style="border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);" />
+  <img src="frontend/public/logo.png" alt="STOCKSENSE Logo" width="120" style="border-radius: 50%; border: 3px solid rgba(59, 130, 246, 0.4); box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);" />
 </p>
 
 <p align="center">
