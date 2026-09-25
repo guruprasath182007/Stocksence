@@ -5,7 +5,7 @@ CREATE TABLE users (
     user_id       INTEGER PRIMARY KEY AUTOINCREMENT,
     username      TEXT    NOT NULL UNIQUE,
     password_hash TEXT    NOT NULL,
-    role          TEXT    NOT NULL CHECK (role IN ('admin', 'manager', 'viewer')),
+    role          TEXT    NOT NULL CHECK (role IN ('admin', 'staff', 'manager', 'viewer')),
     is_active     INTEGER NOT NULL DEFAULT 1 CHECK (is_active IN (0, 1)),
     created_at    TEXT    NOT NULL   -- ISO-8601 UTC
 );

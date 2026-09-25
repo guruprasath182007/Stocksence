@@ -16,14 +16,17 @@ class Settings(BaseModel):
     VERSION: str = "2.0.0"
     
     # Security & Auth
-    SECRET_KEY: str = os.getenv("STOCKSENSE_SECRET_KEY", "stocksense-super-secret-production-key-2026")
+    SECRET_KEY: str = os.getenv(
+        "STOCKSENSE_SECRET_KEY",
+        os.getenv("SECRET_KEY", "stocksense-super-secret-production-key-2026")
+    )
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 24 hours
     
     # Database
     DB_PATH: str = os.getenv(
         "SMARTSTOCK_DB_PATH",
-        str(BASE_DIR / "data" / "smartstock.db")
+        os.getenv("DATABASE_PATH", str(BASE_DIR / "data" / "smartstock.db"))
     )
     
     # CORS
