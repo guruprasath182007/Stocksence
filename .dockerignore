@@ -1,0 +1,49 @@
+# ============================================================
+# STOCKSENSE — DOCKERIGNORE
+# ============================================================
+
+# Git & CI/CD
+.git/
+.github/
+.gitignore
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Node / Frontend (frontend is deployed separately to Firebase Hosting)
+frontend/node_modules/
+frontend/dist/
+frontend/src/
+frontend/public/
+frontend/package.json
+frontend/package-lock.json
+frontend/tsconfig.json
+frontend/vite.config.ts
+
+# Python virtual environment & caches
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing & Coverage
+.pytest_cache/
+tests/
+.coverage
+htmlcov/
+
+# Local databases locks & temp files
+*.db-journal
+*.db-wal
+*.db-shm
+*.tmp
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

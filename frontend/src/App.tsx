@@ -20,12 +20,12 @@ const AuthenticatedApp: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="h-screen w-screen bg-slate-950 flex flex-col items-center justify-center space-y-4">
-        <div className="w-16 h-16 rounded-full border-2 border-blue-500/40 p-1 bg-slate-900 shadow-xl flex items-center justify-center animate-pulse">
+      <div className="h-screen w-screen bg-slate-50 flex flex-col items-center justify-center space-y-4">
+        <div className="w-16 h-16 rounded-full border-2 border-blue-500/50 p-1 bg-white shadow-xl shadow-blue-500/10 flex items-center justify-center animate-pulse">
           <img src="/logo.png" alt="STOCKSENSE" className="w-full h-full object-cover rounded-full" />
         </div>
-        <div className="flex items-center space-x-2 text-slate-400 text-xs">
-          <span className="w-2 h-2 rounded-full bg-blue-500 animate-ping" />
+        <div className="flex items-center space-x-2 text-slate-600 text-xs font-semibold">
+          <span className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-ping" />
           <span>Initializing STOCKSENSE Intelligence Engine...</span>
         </div>
       </div>
@@ -62,12 +62,12 @@ const AuthenticatedApp: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex">
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex">
       {/* Official STOCKSENSE Navigation Sidebar */}
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Main Content Area */}
-      <div className="flex-1 ml-64 flex flex-col min-h-screen min-w-0">
+      <div className="flex-1 ml-64 flex flex-col min-h-screen min-w-0 bg-slate-50">
         <Navbar selectedStoreId={selectedStoreId} onStoreChange={setSelectedStoreId} />
         <main className="flex-1 p-8 max-w-7xl w-full mx-auto">{renderActiveView()}</main>
       </div>

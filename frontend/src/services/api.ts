@@ -13,7 +13,8 @@ import {
   User,
 } from '../types';
 
-const API_BASE = '/api';
+const rawApiBase = import.meta.env.VITE_API_BASE_URL || '/api';
+const API_BASE = rawApiBase.endsWith('/') ? rawApiBase.slice(0, -1) : rawApiBase;
 
 export function getAuthToken(): string | null {
   return localStorage.getItem('stocksense_token');

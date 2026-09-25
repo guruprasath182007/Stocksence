@@ -21,27 +21,27 @@ export const StatCard: React.FC<StatCardProps> = ({
   accentColor = 'blue',
 }) => {
   const accentBorders = {
-    blue: 'hover:border-blue-500/40',
-    emerald: 'hover:border-emerald-500/40',
-    amber: 'hover:border-amber-500/40',
-    rose: 'hover:border-rose-500/40',
-    purple: 'hover:border-purple-500/40',
+    blue: 'hover:border-blue-400',
+    emerald: 'hover:border-emerald-400',
+    amber: 'hover:border-amber-400',
+    rose: 'hover:border-rose-400',
+    purple: 'hover:border-purple-400',
   };
 
   const iconColors = {
-    blue: 'text-blue-400 bg-blue-500/10 border-blue-500/20',
-    emerald: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-    amber: 'text-amber-400 bg-amber-500/10 border-amber-500/20',
-    rose: 'text-rose-400 bg-rose-500/10 border-rose-500/20',
-    purple: 'text-purple-400 bg-purple-500/10 border-purple-500/20',
+    blue: 'text-blue-600 bg-blue-50 border-blue-200',
+    emerald: 'text-emerald-600 bg-emerald-50 border-emerald-200',
+    amber: 'text-amber-600 bg-amber-50 border-amber-200',
+    rose: 'text-rose-600 bg-rose-50 border-rose-200',
+    purple: 'text-purple-600 bg-purple-50 border-purple-200',
   };
 
   return (
     <div
-      className={`bg-slate-900/90 border border-slate-800 rounded-xl p-5 shadow-sm transition-all duration-200 ${accentBorders[accentColor]}`}
+      className={`bg-white border border-slate-200/90 rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-200 ${accentBorders[accentColor]}`}
     >
       <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
           {title}
         </span>
         {icon && (
@@ -52,11 +52,11 @@ export const StatCard: React.FC<StatCardProps> = ({
       </div>
 
       <div className="mt-3 flex items-baseline justify-between">
-        <h3 className="text-2xl font-bold tracking-tight text-white">{value}</h3>
+        <h3 className="text-2xl font-extrabold tracking-tight text-slate-900">{value}</h3>
         {trend && (
           <span
-            className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-              trend.isPositive ? 'bg-emerald-500/10 text-emerald-400' : 'bg-rose-500/10 text-rose-400'
+            className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+              trend.isPositive ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'
             }`}
           >
             {trend.value}
@@ -64,7 +64,7 @@ export const StatCard: React.FC<StatCardProps> = ({
         )}
       </div>
 
-      {subtitle && <p className="mt-1 text-xs text-slate-400 font-medium">{subtitle}</p>}
+      {subtitle && <p className="mt-1 text-xs text-slate-500 font-medium">{subtitle}</p>}
     </div>
   );
 };
